@@ -18,3 +18,5 @@ let alumnoSchema = new Schema({
 })
 
 module.exports = mongoose.model('Alumno', alumnoSchema)
+
+// Deuda técnica : pasar la lógica de negocio que está en el controller hacia este archivo e importarla en el controlador de alumnos
