@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const Alumno = require('../models/Alumnos')
 
+//TO-DO
+//
+//Deuda tecnica 1: pasar la logica de negocio al modelo
+//Deuda tecnica 2: aplicar async-await al método POST
+
+
 app.get('/alumnos', async(req, res) => {
     try {
         const alumnos = await Alumno.find({}, 'primerNombre apellido nota').exec();
@@ -11,7 +17,8 @@ app.get('/alumnos', async(req, res) => {
     }
 });
 
-app.post('/alumnos', async(req, res) => {
+
+app.post('/alumnos', (req, res) => {
 
     let body = req.body;
 
@@ -51,6 +58,3 @@ app.get('/aprobados', async(req, res) => {
 })
 
 module.exports = app;
-
-
-// Deuda técnica : pasar la lógica de negocio que está en el controller hacia este archivo e importarla en el controlador de alumnos

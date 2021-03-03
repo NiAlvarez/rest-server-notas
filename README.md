@@ -10,6 +10,10 @@ Para ejecutar esta API en un entorno local:
 
 Los comandos son:
 
- POST: crear alumno,
+ POST: crear alumno, // Necesita recibir las claves y valores de "primerNombre, apellido, nota"
  GET: alumnos,
  GET: aprobados.
+
+Tanto la base de datos como el proyecto YA ESTAN DEPLOYADOS. Con hacer las peticiones en Postman ya están bien :)
+
+Deploy del proyecto en Heroku:  https://nota-alumnos.herokuapp.com/
